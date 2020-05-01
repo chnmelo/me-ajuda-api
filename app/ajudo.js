@@ -9,6 +9,6 @@ const ajudoSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Ajuda'
     },
-})
+},{ timestamps: true })
 
 module.exports = restful.model('Ajudo',ajudoSchema)
