@@ -28,12 +28,17 @@ module.exports = function(server){
             } );
     });
     router.get('/ajuda/cidade/:cidade', function (req, res) {
-        ajudaService.find({ cidade: req.params.cidade}, function(err, data){
+        ajudaService.find({ cidade: req.params.cidade }, function(err, data){
             res.json(data);
         })
     });
     router.get('/ajuda/estado/:estado', function (req, res) {
-        ajudaService.find({ estado: req.params.estado}, function(err, data){
+        ajudaService.find({ estado: req.params.estado }, function(err, data){
+            res.json(data);
+        })
+    });
+    router.get('/ajuda/regiao/:estado/:cidade', function (req, res) {
+        ajudaService.find({ estado: req.params.estado, cidade: req.params.cidade }, function(err, data){
             res.json(data);
         })
     });
