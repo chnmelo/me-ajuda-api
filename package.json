@@ -1,0 +1,19 @@
+{
+  "name": "me-ajuda-api",
+  "version": "0.0.1",
+  "description": "Api para salvar dados do me-ajuda app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node loader.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "node-restful": "^0.2.6"
+  }
+}
