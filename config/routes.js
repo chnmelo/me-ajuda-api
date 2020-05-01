@@ -15,4 +15,7 @@ module.exports = function(server){
 
     const ajudaService = require('../app/ajudaService')
     ajudaService.register(router,'/ajuda')
+
+    const ajudoService = require('../app/ajudoService')
+    ajudoService.register(router,'/ajudo')
 }
