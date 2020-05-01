@@ -7,8 +7,8 @@ module.exports = function(server){
     const router = express.Router()
     router.get('/', function (req, res) {
         res.json({
-            status: 'API Its Working',
-            message: 'Welcome to RESTHub crafted with love!'
+            status: 'API Está no Ar',
+            message: 'Bem-vindo ao MeAjuda-api criada com amor para ajudar quem estiver com dificuldades'
         });
     });
     server.use('/api',router)
