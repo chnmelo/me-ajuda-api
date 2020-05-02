@@ -33,7 +33,7 @@ module.exports = function(server){
         })
     });
     router.get('/ajuda/aberto', function (req, res) {
-        ajudaService.find({ concluido: null }, function(err, data){
+        ajudaService.find({ concluido: false }, function(err, data){
             res.json(data);
         })
     });
