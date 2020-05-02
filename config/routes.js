@@ -32,7 +32,11 @@ module.exports = function(server){
             res.json(data);
         })
     });
-
+    router.get('/ajuda/aberto', function (req, res) {
+        ajudaService.find({ concluido: false }, function(err, data){
+            res.json(data);
+        })
+    });
     router.get('/ajuda/chave/:chave', function (req, res) {
         ajudaService.findOne({ chave: req.params.chave }, function(err, data){
             res.json(data);
