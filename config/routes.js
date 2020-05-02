@@ -47,6 +47,11 @@ module.exports = function(server){
             res.json(data);
         })
     });
+    router.get('/ajuda/aberto/regiao/:estado/:cidade', function (req, res) {
+        ajudaService.find({ concluido: false, estado: req.params.estado, cidade: req.params.cidade }, function(err, data){
+            res.json(data);
+        })
+    });
     router.get('/ajuda/regiao/:estado/:cidade', function (req, res) {
         ajudaService.find({ estado: req.params.estado, cidade: req.params.cidade }, function(err, data){
             res.json(data);
