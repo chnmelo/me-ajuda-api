@@ -8,7 +8,8 @@ const ajudaSchema = new mongoose.Schema({
     cidade: {type: String, required: true},
     logradouro: {type: String, required: false},
     descricao: {type: String, required: true},
-    concluido: {type: Boolean, required: false, default: false}
+    concluido: {type: Boolean, required: false, default: false},
+    chave: {type: String, required: true, select: false, unique: true}
 },{ timestamps: true })
 
 module.exports = restful.model('Ajuda',ajudaSchema)

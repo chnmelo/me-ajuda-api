@@ -32,6 +32,12 @@ module.exports = function(server){
             res.json(data);
         })
     });
+
+    router.get('/ajuda/chave/:chave', function (req, res) {
+        ajudaService.findOne({ chave: req.params.chave }, function(err, data){
+            res.json(data);
+        })
+    });
     router.get('/ajuda/estado/:estado', function (req, res) {
         ajudaService.find({ estado: req.params.estado }, function(err, data){
             res.json(data);
